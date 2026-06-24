@@ -12,7 +12,6 @@
 
 import { useRef, useMemo } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
-// @ts-expect-error Types are missing or misconfigured in this version
 import { Points, PointMaterial } from '@react-three/drei'
 import { useReducedMotion } from '@/hooks/useReducedMotion'
 import * as THREE from 'three'
