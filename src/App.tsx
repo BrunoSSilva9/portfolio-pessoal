@@ -43,6 +43,28 @@ function PageLoader() {
   )
 }
 
+// Página principal — todas as seções
+function HomePage() {
+  return (
+    <>
+      {/* tabIndex={-1} permite receber foco do skip link eMAG rec. 1.5 */}
+      <main id="main-content" tabIndex={-1} aria-label="Conteúdo principal">
+        <Hero />
+        <Suspense fallback={null}>
+          <About />
+          <Skills />
+          <Projects />
+          <Publications />
+          <Education />
+          <Experience />
+          <Contact />
+        </Suspense>
+      </main>
+      <Footer />
+    </>
+  )
+}
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -75,31 +97,33 @@ export default function App() {
       />
 
       <Suspense fallback={<PageLoader />}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/acessibilidade" element={<AccessibilityPage />} />
-          {/* 404 fallback */}
-          <Route
-            path="*"
-            element={
-              <main
-                id="main-content"
-                tabIndex={-1}
-                className="flex flex-col items-center justify-center min-h-screen gap-4 text-center px-4"
-              >
-                <h1 className="font-display text-4xl text-[var(--color-gold)]">
-                  404
-                </h1>
-                <p className="text-[var(--color-text-secondary)]">
-                  Esta página não existe no grimório.
-                </p>
-                <a href="/" className="btn-primary mt-4">
-                  Voltar ao Início
-                </a>
-              </main>
-            }
-          />
-        </Routes>
+        <LazyMotion features={domAnimation}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/acessibilidade" element={<AccessibilityPage />} />
+            {/* 404 fallback */}
+            <Route
+              path="*"
+              element={
+                <main
+                  id="main-content"
+                  tabIndex={-1}
+                  className="flex flex-col items-center justify-center min-h-screen gap-4 text-center px-4"
+                >
+                  <h1 className="font-display text-4xl text-[var(--color-gold)]">
+                    404
+                  </h1>
+                  <p className="text-[var(--color-text-secondary)]">
+                    Esta página não existe no grimório.
+                  </p>
+                  <a href="/" className="btn-primary mt-4">
+                    Voltar ao Início
+                  </a>
+                </main>
+              }
+            />
+          </Routes>
+        </LazyMotion>
       </Suspense>
     </BrowserRouter>
   )

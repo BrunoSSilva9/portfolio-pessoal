@@ -47,7 +47,7 @@ export function SectionReveal({
   }
 
   return (
-    <motion.div
+    <m.div
       className={className}
       initial={prefersReduced ? 'visible' : 'hidden'}
       whileInView="visible"
@@ -55,7 +55,7 @@ export function SectionReveal({
       variants={prefersReduced ? {} : variants}
     >
       {children}
-    </motion.div>
+    </m.div>
   )
 }
 
@@ -116,7 +116,7 @@ export function RevealItem({
   }
 
   return (
-    <motion.div
+    <m.div
       className={className}
       variants={{
         hidden: { opacity: 0, y: 20 },
@@ -124,6 +124,6 @@ export function RevealItem({
       }}
     >
       {children}
-    </motion.div>
+    </m.div>
   )
 }
