@@ -1,0 +1,228 @@
+/* ==========================================================================
+   ACESSIBILIDADE — eMAG 3.1 Specific Styles
+   ========================================================================== */
+
+/* Barra de acessibilidade */
+.accessibility-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--a11y-bar-height);
+  z-index: calc(var(--z-overlay) + 1);
+  background-color: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0 var(--section-padding-x);
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+}
+
+.accessibility-bar__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.accessibility-bar__label {
+  color: var(--color-text-tertiary);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.accessibility-bar__controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.accessibility-bar__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 2px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.accessibility-bar__btn span[aria-hidden="true"] {
+  font-size: 12px;
+}
+
+.accessibility-bar__btn:hover,
+.accessibility-bar__btn[aria-pressed="true"] {
+  background: var(--color-bg-tertiary);
+  border-color: var(--color-border-accent);
+  color: var(--color-text-primary);
+}
+
+.accessibility-bar__btn[aria-pressed="true"] {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+/* Skip links — eMAG rec. 1.5 */
+.skip-links {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: calc(var(--z-cursor) - 1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  pointer-events: none;
+}
+
+.skip-link {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  background: var(--color-gold);
+  color: #0A0B0F;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+  pointer-events: none;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+  outline: 2px solid #0A0B0F;
+  outline-offset: 2px;
+}
+
+/* Tabela acessível — eMAG rec. 3.7 */
+.accessible-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+}
+
+.accessible-table caption {
+  font-size: 0.875rem;
+  color: var(--color-text-tertiary);
+  text-align: left;
+  padding-bottom: 0.75rem;
+  font-style: italic;
+}
+
+.accessible-table th,
+.accessible-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.accessible-table th {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-tertiary);
+  background: var(--color-bg-secondary);
+}
+
+.accessible-table tr:hover td {
+  background: var(--color-bg-tertiary);
+}
+
+/* Formulário acessível — eMAG Seção 6 */
+.accessible-form label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.375rem;
+}
+
+.accessible-form input,
+.accessible-form textarea {
+  width: 100%;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.accessible-form input:focus,
+.accessible-form textarea:focus {
+  outline: none;
+  border-color: var(--color-purple);
+  box-shadow: 0 0 0 3px rgba(127, 119, 221, 0.15);
+}
+
+.accessible-form input[aria-invalid="true"],
+.accessible-form textarea[aria-invalid="true"] {
+  border-color: #CF6679;
+  box-shadow: 0 0 0 3px rgba(207, 102, 121, 0.15);
+}
+
+.accessible-form .field-error {
+  display: block;
+  color: #CF6679;
+  font-size: 0.8125rem;
+  margin-top: 0.375rem;
+  min-height: 1.25em;
+}
+
+.accessible-form textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* Página de acessibilidade */
+.a11y-page-shortcut-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.a11y-page-shortcut-table th,
+.a11y-page-shortcut-table td {
+  padding: 0.625rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  font-family: var(--font-body);
+}
+
+.a11y-page-shortcut-table th {
+  color: var(--color-text-tertiary);
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+kbd {
+  display: inline-block;
+  padding: 0.1875rem 0.5rem;
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border-accent);
+  border-radius: var(--radius-sm);
+  font-family: monospace;
+  font-size: 0.8125rem;
+  color: var(--color-text-primary);
+}
