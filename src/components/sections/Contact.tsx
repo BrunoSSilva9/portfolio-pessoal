@@ -169,9 +169,8 @@ export default function Contact() {
                 className="font-body"
                 style={{ color: 'var(--color-text-secondary)', lineHeight: 1.8, fontSize: 'clamp(0.9375rem, 1.5vw, 1rem)' }}
               >
-                Pronto para iniciar uma nova quest? Se você tem um projeto interessante,
-                uma oportunidade de estágio ou simplesmente quer trocar
-                uma ideia sobre tecnologia, estou disponível.
+                Pronto para iniciar uma nova quest? Se você tem uma idéia,
+                um problema ou uma oportunidade, posso ajudar a transformar isso em sistema.
               </p>
               <p
                 className="font-body"

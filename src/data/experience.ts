@@ -57,7 +57,7 @@ export const experiences: Experience[] = [
       'Diretor de Gente e Gestão.',
       'Documentação técnica de projetos e relatórios acadêmicos.',
     ],
-    techStack: ['React', 'TypeScript', 'SQL', 'Postgree', 'Git'],
+    techStack: ['React', 'TypeScript', 'SQL', 'PostgreSQL', 'Git'],
     isHighlighted: true,
   },
 

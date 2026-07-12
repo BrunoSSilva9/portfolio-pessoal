@@ -15,7 +15,7 @@ const hobbies = [
   },
   {
     emoji: '🏐',
-    label: 'Apreciador de vôlei (voleifã',
+    label: 'Apreciador de vôlei (voleifã)',
     short: 'Vôlei',
   },
   {
@@ -167,11 +167,10 @@ export default function About() {
                 </strong>{' '}
                 na{' '}
                 <abbr title="Universidade Federal do Sul e Sudeste do Pará">
-                  UNIFESSPA
+                  UNIFESSPA.
                 </abbr>
-                {' '}e desenvolvedor em construção. Apaixonado por criar
-                soluções que realmente fazem diferença — com código limpo,
-                interfaces acessíveis e atenção aos detalhes.
+                {' '}Ao longo da minha trajetória como desenvolvedor,
+                aprendi que entender o problema vem antes de abrir o editor de código.
               </p>
 
               <p
@@ -182,9 +181,8 @@ export default function About() {
                   lineHeight: 1.8,
                 }}
               >
-                Fora do teclado, você me encontra lendo livros de fantasia,
-                vendo uma boa partida de vôlei ou assistindo animes(eventualmente é fato!). Essa mistura de mundos
-                alimenta minha criatividade e minha forma de pensar em sistemas.
+                Fora do teclado, você me encontra lendo livros de fantasia/ficção,
+                vendo uma boa partida de vôlei ou assistindo animes (eventualmente é fato!).
               </p>
             </div>
 

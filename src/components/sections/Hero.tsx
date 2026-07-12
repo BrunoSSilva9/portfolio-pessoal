@@ -66,8 +66,8 @@ export default function Hero() {
   }
 
   const itemVariants = {
-    hidden:   { opacity: 0, y: 24 },
-    visible:  { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] } },
+    hidden: { opacity: 0, y: 24 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] } },
   }
 
   return (
@@ -102,12 +102,12 @@ export default function Hero() {
 
       {/* ── Partículas decorativas estáticas com Parallax ─────────────── */}
       {[
-        { top: '18%', left: '8%',  size: 3, color: '--color-gold',    opacity: 0.5 },
-        { top: '30%', right: '6%', size: 2, color: '--color-purple',  opacity: 0.7 },
+        { top: '18%', left: '8%', size: 3, color: '--color-gold', opacity: 0.5 },
+        { top: '30%', right: '6%', size: 2, color: '--color-purple', opacity: 0.7 },
         { top: '65%', left: '12%', size: 2, color: '--color-emerald', opacity: 0.4 },
-        { top: '75%', right: '10%',size: 3, color: '--color-gold',    opacity: 0.3 },
-        { top: '12%', right: '20%',size: 1.5,color: '--color-purple', opacity: 0.6 },
-        { top: '55%', left: '4%', size: 1.5,color: '--color-emerald', opacity: 0.5 },
+        { top: '75%', right: '10%', size: 3, color: '--color-gold', opacity: 0.3 },
+        { top: '12%', right: '20%', size: 1.5, color: '--color-purple', opacity: 0.6 },
+        { top: '55%', left: '4%', size: 1.5, color: '--color-emerald', opacity: 0.5 },
       ].map((p, i) => (
         <div
           key={i}
@@ -218,8 +218,7 @@ export default function Hero() {
         >
           Transformando lógica em magia digital na{' '}
           <abbr title="Universidade Federal do Sul e Sudeste do Pará">UNIFESSPA</abbr>.
-          {' '}Construindo soluções robustas com foco em acessibilidade,
-          performance e experiência do usuário.
+          {' '}Cada projeto começa entendendo quem vai usar, o código vem depois.
         </motion.p>
 
         {/* CTAs */}

@@ -12,11 +12,11 @@ const typeConfig: Record<
   EducationItem['type'],
   { label: string; color: string; dimColor: string; icon: string }
 > = {
-  graduacao:    { label: 'Graduação',    color: 'var(--color-gold)',    dimColor: 'rgba(232,168,56,0.15)',  icon: '🎓' },
-  curso:        { label: 'Curso',        color: 'var(--color-purple)',  dimColor: 'rgba(127,119,221,0.15)', icon: '📖' },
-  certificacao: { label: 'Certificação', color: 'var(--color-emerald)', dimColor: 'rgba(29,158,117,0.15)',  icon: '✅' },
-  bootcamp:     { label: 'Bootcamp',     color: 'var(--color-purple)',  dimColor: 'rgba(127,119,221,0.15)', icon: '⚡' },
-  evento:       { label: 'Evento',       color: 'var(--color-text-secondary)', dimColor: 'var(--color-bg-tertiary)', icon: '🎪' },
+  graduacao: { label: 'Graduação', color: 'var(--color-gold)', dimColor: 'rgba(232,168,56,0.15)', icon: '🎓' },
+  curso: { label: 'Curso', color: 'var(--color-purple)', dimColor: 'rgba(127,119,221,0.15)', icon: '📖' },
+  certificacao: { label: 'Certificação', color: 'var(--color-emerald)', dimColor: 'rgba(29,158,117,0.15)', icon: '✅' },
+  bootcamp: { label: 'Bootcamp', color: 'var(--color-purple)', dimColor: 'rgba(127,119,221,0.15)', icon: '⚡' },
+  evento: { label: 'Evento', color: 'var(--color-text-secondary)', dimColor: 'var(--color-bg-tertiary)', icon: '🎪' },
 }
 
 export default function Education() {
@@ -253,7 +253,7 @@ export default function Education() {
           className="font-body text-center mt-10"
           style={{ color: 'var(--color-text-tertiary)', fontSize: '0.8125rem' }}
         >
-          📚 Cursos e certificações complementares serão adicionados em breve.
+          {/*📚 Cursos e certificações complementares serão adicionados em breve.*/}
         </p>
       </div>
     </section>
